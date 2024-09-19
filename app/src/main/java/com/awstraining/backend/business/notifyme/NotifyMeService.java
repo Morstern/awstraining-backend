@@ -35,7 +35,7 @@ public class NotifyMeService {
         //  2. Change sending of text to "translated text" and return it.
         // TODO: lab3
         //  1. Detect sentiment of translated message.
-        String sentimentValue = sentiment.detectSentiment(translatedText, notifyMe.targetLc());
+        String sentimentValue = sentiment.detectSentiment(notifyMe.targetLc(),translatedText);
 
         String resultText = "%s: %s".formatted(sentimentValue, translatedText);
         messageSender.send(resultText);
